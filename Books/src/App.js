@@ -7,43 +7,50 @@ function App() {
       id: 1,
       title: "Eloquent JavaScript",
       rating: "4 / 5",
-      category: "javascript"
+      category: "javascript",
     },
 
     {
       id: 2,
-      title: "You Don't Know JS",
-      rating: "3.5 / 5",
-      category: "javascript"
+      title: "JavaScript: The Definitive Guide",
+      rating: "4.5 / 5",
+      category: "javascript",
     },
 
     {
       id: 3,
-      title: "Shiva Trilogy",
-      rating: "5/5",
-      category: "fiction"
+      title: "You Don't Know JS",
+      rating: "3.5 / 5",
+      category: "javascript",
     },
 
     {
       id: 4,
-      title: "Harry Potter and the Sorcerer's Stone",
-      rating: "4.5/5",
-      category: "fiction"
+      title: "Shiva Trilogy",
+      rating: "5/5",
+      category: "fiction",
     },
 
     {
       id: 5,
-      title: "Never Split the Difference",
-      rating: "3.5/5",
-      category: "business"
+      title: "Harry Potter and the Sorcerer's Stone",
+      rating: "4.5/5",
+      category: "fiction",
     },
 
     {
       id: 6,
+      title: "Never Split the Difference",
+      rating: "3.5/5",
+      category: "business",
+    },
+
+    {
+      id: 7,
       title: "Loonshots",
       rating: "5/5",
-      category: "business"
-    }
+      category: "business",
+    },
   ];
 
   const [bookList, setBookList] = useState(books);
@@ -55,7 +62,7 @@ function App() {
       books.map((book) => {
         return book.category;
       })
-    )
+    ),
   ]; // to convert to an array
 
   const handleClick = (category) => {
