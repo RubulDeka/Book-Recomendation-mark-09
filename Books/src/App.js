@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.js";
 
 function App() {
-  const books = [
+  var books = [
     {
       id: 1,
       title: "Eloquent JavaScript",
@@ -33,29 +33,42 @@ function App() {
 
     {
       id: 5,
+      title: "The Hunger Games",
+      rating: "5/5",
+      category: "fiction",
+    },
+
+    {
+      id: 6,
       title: "Harry Potter and the Sorcerer's Stone",
       rating: "4.5/5",
       category: "fiction",
     },
 
     {
-      id: 6,
+      id: 7,
       title: "Never Split the Difference",
       rating: "3.5/5",
       category: "business",
     },
 
     {
-      id: 7,
+      id: 8,
       title: "Loonshots",
       rating: "5/5",
+      category: "business",
+    },
+
+    {
+      id: 9,
+      title: "The Lean Startup",
+      rating: "4/5",
       category: "business",
     },
   ];
 
   const [bookList, setBookList] = useState(books);
 
-  // to pull out unique categories and avoid repetation
   const categories = [
     "all",
     ...new Set(
@@ -63,7 +76,7 @@ function App() {
         return book.category;
       })
     ),
-  ]; // to convert to an array
+  ];
 
   const handleClick = (category) => {
     if (category === "all") {
